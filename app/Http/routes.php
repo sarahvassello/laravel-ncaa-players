@@ -12,5 +12,23 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  // documentation goes here
+});
+
+Route::get('/players', function () {
+  $myArray = [
+    [
+    'id' => 'UNC',
+    'first' => 'Arkansas',
+    'last' => 72,
+    'gamesPlayed' => 65
+    ],
+    [
+      'home' => 'Duke',
+      'away' => 'South Carolina',
+      'ptsHome' => 81,
+      'ptsAway' => 89
+    ]
+  ];
+  return Response::json($myArray);
 });
